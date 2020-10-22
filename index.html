@@ -6,7 +6,62 @@
     <title>SOFAS</title>
 </head>
 <body>
-    
+    <form id="filtersForm" onsubmit="handleFilters(event)">
+        <div>
+            <h3>Colors</h3>
+            <label>
+                <input type="checkbox" name="color" value="grey" />
+                Grey
+            </label>
+            <label>
+                <input type="checkbox" name="color" value="yellow" />
+                Yellow
+            </label>
+            <label>
+                <input type="checkbox" name="color" value="salmon" />
+                Salmon
+            </label>
+            <label>
+                <input type="checkbox" name="color" value="green" />
+                Green
+            </label>            
+        </div>
+
+        <div>
+            <h3>Categories</h3>
+            <label>Category</label>
+            <select name="category">
+                <option value="">Select category</option>
+                <option value="Bed">Bed</option>
+                <option value="Table">Table</option>
+                <option value="Chair">Chair</option>
+                <option value="Sofa">Sofa</option>
+            </select>
+        </div>
+
+        <div>
+            <h3>Price range</h3>
+            <input type="range" name="price" min=0 max=1000 />
+        </div>        
+
+        <div>
+            <h3>Sort</h3>
+            <select name="search">
+                <option value="">Default</option>
+                <option value="DESC">Price highest first</option>
+                <option value="ASC">Price lowest first</option>
+            </select>
+        </div>
+
+        <button type="submit">Apply filters</button>
+    </form>
+
+    <section>
+        <h2>Products</h2>
+        <div id="productList"></div>
+    </section>
+
     <script src="products.js"></script>
+    <script src="index.js"></script>
 </body>
 </html>
